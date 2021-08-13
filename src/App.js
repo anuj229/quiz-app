@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/header/Header'
 import Home from './pages/Home/Home'
 import Quiz from './pages/Quiz/Quiz'
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter, Switch, Route, Link } from "react-router-dom";
 import { useState } from 'react';
 import axios from 'axios';
 import Result from './pages/result/Result';
@@ -23,7 +23,7 @@ function App() {
   };
      
   return (
-    <Router>
+    <HashRouter>
       <Header />
       <Switch>
         <Route exact path="/">
@@ -42,7 +42,7 @@ function App() {
           <Result score={score} />
         </Route>
       </Switch>
-    </Router>
+    </HashRouter>
   );
 }
 
